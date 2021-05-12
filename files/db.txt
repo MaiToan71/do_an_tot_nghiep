@@ -1,0 +1,108 @@
+create table users(
+    id int NOT NULL  AUTO_INCREMENT,
+    username  varchar(50) UNIQUE NOT NULL,
+    email varchar(50) UNIQUE NOT NULL,
+    password  varchar(100) NOT NULL,
+    phone_number varchar(11) null UNIQUE,
+    avatar varchar(255) NOT NULL,
+    status int not null DEFAULT 1,
+    created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+)ENGINE = INNODB;
+CREATE TABLE roles(
+    id int not null AUTO_INCREMENT,
+    name varchar(50) UNIQUE,
+    status int DEFAULT 1,
+    created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+   PRIMARY KEY(id)
+)ENGINE = INNODB;
+  
+CREATE TABLE actions (
+     id int not null AUTO_INCREMENT,
+     name varchar(255) UNIQUE,
+     action_name varchar(255) UNIQUE,
+     status int DEFAULT 1,
+      created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+     updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+)ENGINE = INNODB;
+
+CREATE TABLE role_action (
+    role_id int,
+    action_id int,
+     status int DEFAULT 1,
+    created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(role_id, action_id),
+    FOREIGN KEY (role_id) REFERENCES roles(id),
+    FOREIGN KEY (action_id) REFERENCES actions(id)
+)ENGINE = INNODB;
+CREATE TABLE user_role (
+    role_id int,
+    user_id int,
+    status int DEFAULT 1,
+    created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(role_id, action_id),
+    FOREIGN KEY (role_id) REFERENCES roles(id),
+    FOREIGN KEY (user_id) REFERENCES users(id)
+)ENGINE = INNODB;
+CREATE TABLE pages (
+    id int not null AUTO_INCREMENT,
+    name varchar(255) UNIQUE,
+    footer_content text,
+    status int DEFAULT 1,
+     created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+)ENGINE = INNODB;
+CREATE TABLE life_cycles (
+     id int not null AUTO_INCREMENT,
+    name varchar(50) UNIQUE,
+    status int DEFAULT 1,
+    created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id)
+)ENGINE = INNODB;
+CREATE TABLE posts (
+    id int not null AUTO_INCREMENT,
+	user_id int ,
+    page_id int,
+    title varchar(255),
+    content text,
+    thumbnail varchar(255),
+    tags varchar(255),
+    life_cycle_id int ,
+    status int DEFAULT 1,
+    created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id),
+    FOREIGN KEY (role_id) REFERENCES roles(id),
+    FOREIGN KEY (page_id) REFERENCES pages(id),
+    FOREIGN KEY (life_cycle_id) REFERENCES life_cycle_ids(id)
+)ENGINE = INNODB;
+CREATE TABLE stock_datas (
+    user_id int ,
+    page_id int,
+    meta_data text,
+    status int DEFAULT 1,
+    created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(user_id,page_id),
+    FOREIGN KEY (role_id) REFERENCES roles(id),
+    FOREIGN KEY (page_id) REFERENCES pages(id)
+)ENGINE = INNODB;
+
+CREATE TABLE configs (
+    id int not null AUTO_INCREMENT,
+    page_id int ,
+    token text,
+    status int DEFAULT 1,
+    created_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    updated_at timestamp not null DEFAULT CURRENT_TIMESTAMP,
+    PRIMARY KEY(id),
+    FOREIGN KEY (page_id) REFERENCES pages(id)
+)ENGINE = INNODB;
+ 

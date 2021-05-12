@@ -1,0 +1,81 @@
+{
+	"info": {
+		"_postman_id": "6854adeb-ec86-4f93-bd35-daaaf1599b96",
+		"name": "youtube",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get playlist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Object\":\r\n    {\"access_token\":\"ya29.a0AfH6SMAhW46X1lUvcZ7Yge5mij6yakhx8s23F8HV7v9zI5fpwSm1Y-ZeHC5E7_7gNKq2bS5_zSe1qnkSEAAYQE6QgyUQVThfdJyVwlH8IPQVSY2r9V-ZhcAkCin7qgewt8wiXb2iorP1cz-UqPeDIUn6M2s4BlGwlMfBJQBVOMU\",\"expires_in\":3599,\"refresh_token\":\"1\\/\\/0esP5kHc22ZI8CgYIARAAGA4SNwF-L9IrDBU6wn2r_lZmPG6OpprNQvPfgFvuWrysabGrYfrf85Vl-rLmjw6nTTY1JXCLN3n1IsA\",\"scope\":\"https:\\/\\/www.googleapis.com\\/auth\\/youtube.readonly https:\\/\\/www.googleapis.com\\/auth\\/drive https:\\/\\/www.googleapis.com\\/auth\\/youtube.upload https:\\/\\/www.googleapis.com\\/auth\\/youtube\",\"token_type\":\"Bearer\",\"created\":1611728228}\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://api.youtube.tek4tv.vn:8090/api/playlists"
+			},
+			"response": []
+		},
+		{
+			"name": "create playlist",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"playlistName\":\"ggg title test 02\",\r\n    \"descriptions\":\"ggg des test 02\",\r\n    \"privacy\":\"public\",\r\n    \"Token\":\"ya29.a0AfH6SMAUOfmlV2413gkXt4gJ7wn9qOpxhTA-dcQS_dH15qiHpfzDXWToh6DGlRgZZ8q12nAIxqSQ4FR4mkFp4GDncJhZxlG1VZKWfea4l3hWA9qWVtCg0A0-_PJVahii7v6u5Et6YPFOMkgdNRASnDcve19iL-GMHo4XlHTWXwM\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://api.youtube.tek4tv.vn:8090/api/CreatePlaylits"
+			},
+			"response": []
+		},
+		{
+			"name": "create video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"video\":\"file:///Z:/MAM/AN_NINH_TV/2020/11/13/BAN_TIN_113_ONLINE_CAP_NHAT_HOM_NAY_NGAY_08_11_2020/092512_Ban_tin_113_Online_cap_nhat_hom_nay_ngay_08_11_2020.mp4\",\r\n    \"thumbnail\":\"file:///Z:/IMAGE/Storage/2020/11/02/110953_khoang_troi_ngap_gio_480_480_270.png\",\r\n    \"title\":\"TRƯA NAY ĂN GÌ NGON NGON ĐI BẠN ƠI? 2\",\r\n    \"description\":\"- Bữa trưa hấp dẫn chỉ từ #59K tại hơn 200 nhà hàng Golden Gate /n - Tặng 10.000 code Grab trị giá #30k/ chuyến để xách ví đi ăn trưa mà không lo mưa giông, nắng nóng. Chương trình kéo dài đến hết 6/9/2017.\",\r\n    \"tags\":[\"59k\",\"30k\",\"Truanayangingongon\"],\r\n    \"playlistId\":\"PLbNTvaDg6Zgu1ta7yUti6El1kxCxL_8X3\",\r\n    \r\n    \"status\":\"private\",\r\n    \"Object\":{\r\n               \"access_token\": \"ya29.a0AfH6SMAhW46X1lUvcZ7Yge5mij6yakhx8s23F8HV7v9zI5fpwSm1Y-ZeHC5E7_7gNKq2bS5_zSe1qnkSEAAYQE6QgyUQVThfdJyVwlH8IPQVSY2r9V-ZhcAkCin7qgewt8wiXb2iorP1cz-UqPeDIUn6M2s4BlGwlMfBJQBVOMU\",\r\n        \"expires_in\": 3599,\r\n        \"refresh_token\": \"1//0esP5kHc22ZI8CgYIARAAGA4SNwF-L9IrDBU6wn2r_lZmPG6OpprNQvPfgFvuWrysabGrYfrf85Vl-rLmjw6nTTY1JXCLN3n1IsA\",\r\n        \"scope\": \"https://www.googleapis.com/auth/youtube.readonly https://www.googleapis.com/auth/drive https://www.googleapis.com/auth/youtube.upload https://www.googleapis.com/auth/youtube\",\r\n        \"token_type\": \"Bearer\",\r\n        \"created\": 1611728228\r\n        }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://api.youtube.tek4tv.vn:8090/api/CreateVideo"
+			},
+			"response": []
+		},
+		{
+			"name": "insert token to db",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://api.youtube.tek4tv.vn:8090/youtube/auth"
+			},
+			"response": []
+		},
+		{
+			"name": "get token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://api.youtube.tek4tv.vn:8090/api/token"
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,593 @@
+{
+	"info": {
+		"_postman_id": "4cb2be86-f78f-45d1-a174-52476d35a0ce",
+		"name": "apifb",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "post mutiple imgs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"PageId\":\"100555448434769\",\r\n    \"Message\":\"test 10p Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.\",\r\n\"Images\":[\"https://baoquocte.vn/stores/news_dataimages/dieulinh/012020/29/15/nhung-buc-anh-dep-tuyet-voi-ve-tinh-ban.jpg\"],\r\n\"Token\":\"100555448434769\",\r\n\"Time\":\"+10 minutes\",\r\n\"AppId\":\"1127349410978044\",\r\n\"AppSecret\":\"30268bb06983f183738264f313d73aba\",\r\n\"Version\":\"v7.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/mutiple"
+			},
+			"response": []
+		},
+		{
+			"name": "get pages",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Token\":\"EAAQBUX0t2PwBAMXsZCx2AXjextgHGP9zWAtEmz3Vhx2RuFHJdYSl9D4sxDoCC0bynAJr8T6TSV9xBjXjg1pw3XUbrEruOof0c0GJ0mkdhhLFbrCoYjrzAW8AdZB9cybZCpALSZCdiGBHURcL5TCE4JaUBFQK2z3IFc2tc7hrWAZDZD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://14.225.16.144:8000/api/pages"
+			},
+			"response": []
+		},
+		{
+			"name": "hidden comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n    \"PageId\":\"106596004639262\",      \r\n    \"Token\":\"EAASOqGiumjABAJfHwVS0sFypzrsUZABWq0IsAw9KP721GvVdsC8CG5uyUlZBK3tBLIB7fxh0LvXgZCl05n20uvJiMRQDxobelHWGyMSZBxyA8aTm1ZA7b2ORwPZBmBgOEq1rtN3HZC3kI1I513ISyXH4rPb9sFhjmlEzPaxOc0vupTeND6bnts027i4DRJ89XgRgJOa88gCXAZDZD\",\r\n    \"PostId\":\"106596004639262_109207061044823\",\r\n    \"CommentId\":[\"109207061044823_109218201043709\",\"\"],\r\n    \"Ishidden\":false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/hidden"
+			},
+			"response": []
+		},
+		{
+			"name": "get token of page",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"100140261527125\",\r\n    \"UserToken\":\"EAAQBUX0t2PwBAA7qQ0PqnLqu7cU5klmwJ4sKFzrUBfBh691OZAcK9HPk78ekuEsCFRntJ4RsJIeQZBMV8xD5QQrNtktyTxCZBZBBVhfmuYMvsb9tGaIUPmZA0WziZAItPFTH1geqHAoMeJhhZCqaVYhGXpN8fEtrKgu0HuztrfdCdtx6vglmfEk\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/getTokenPage"
+			},
+			"response": []
+		},
+		{
+			"name": "get post of page",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",\r\n    \"UserToken\":\"EAASOqGiumjABAAZCJMI0ZB63083qZAZCdCJPeoZB8pZCmKZCGJDdiekEH79kyeqglWD5wsZAYu01AfYY0w1gvbS3jxJoZCIUtZC02ozgdzpGHvtAczjC0Skh8EPJVHkvlnZCPc48yWzRfzMVL1TDOyDqMAVIyYIYKoaaKOnbZCzqr4DIK749NYhsX8eCmi1mveDDbUwVmW5sl9ygZCQZDZD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/getPosts"
+			},
+			"response": []
+		},
+		{
+			"name": "get comments",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",\r\n    \"PostId\":\"106596004639262_109207061044823\",\r\n    \"UserToken\":\"EAASOqGiumjABAAZCJMI0ZB63083qZAZCdCJPeoZB8pZCmKZCGJDdiekEH79kyeqglWD5wsZAYu01AfYY0w1gvbS3jxJoZCIUtZC02ozgdzpGHvtAczjC0Skh8EPJVHkvlnZCPc48yWzRfzMVL1TDOyDqMAVIyYIYKoaaKOnbZCzqr4DIK749NYhsX8eCmi1mveDDbUwVmW5sl9ygZCQZDZD\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/getComments"
+			},
+			"response": []
+		},
+		{
+			"name": "reply comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",  \r\n    \"UserToken\":\"EAASOqGiumjABAF9ZAPUK1uxRnyQox0O1eAsAPcA4WSgljTB4znRq5OZCnNCnCgRoOsvSQQRX1uGBMXWLpGq8kBBfvjqzOq2T1pjIVWCfGXX9Bq0JdlsU6EnZADuujFZAfW3D0tLeu6Evr7X9yMfHZBEdJZASMZCY3V0UcnpquYqTOZBZCa08UfOW8P4YcMLZC1uLsh11vbHAGTCrc6lF11ZAe7x\",\r\n    \"CommentId\":\"109207061044823_109218167710379\",\r\n    \"MessageReply\":\"xin chao\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/replyComments"
+			},
+			"response": []
+		},
+		{
+			"name": "like comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",    \r\n    \"UserToken\":\"EAASOqGiumjABAAZCJMI0ZB63083qZAZCdCJPeoZB8pZCmKZCGJDdiekEH79kyeqglWD5wsZAYu01AfYY0w1gvbS3jxJoZCIUtZC02ozgdzpGHvtAczjC0Skh8EPJVHkvlnZCPc48yWzRfzMVL1TDOyDqMAVIyYIYKoaaKOnbZCzqr4DIK749NYhsX8eCmi1mveDDbUwVmW5sl9ygZCQZDZD\",\r\n    \"CommentId\":\"109207061044823_109218167710379\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/likeComments"
+			},
+			"response": []
+		},
+		{
+			"name": "delete comment",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",    \r\n    \"UserToken\":\"EAASOqGiumjABAAZCJMI0ZB63083qZAZCdCJPeoZB8pZCmKZCGJDdiekEH79kyeqglWD5wsZAYu01AfYY0w1gvbS3jxJoZCIUtZC02ozgdzpGHvtAczjC0Skh8EPJVHkvlnZCPc48yWzRfzMVL1TDOyDqMAVIyYIYKoaaKOnbZCzqr4DIK749NYhsX8eCmi1mveDDbUwVmW5sl9ygZCQZDZD\",\r\n    \"CommentId\":\"109207061044823_109218167710379\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/unlikeComments"
+			},
+			"response": []
+		},
+		{
+			"name": "edit comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",    \r\n    \"UserToken\":\"EAASOqGiumjABAAZCJMI0ZB63083qZAZCdCJPeoZB8pZCmKZCGJDdiekEH79kyeqglWD5wsZAYu01AfYY0w1gvbS3jxJoZCIUtZC02ozgdzpGHvtAczjC0Skh8EPJVHkvlnZCPc48yWzRfzMVL1TDOyDqMAVIyYIYKoaaKOnbZCzqr4DIK749NYhsX8eCmi1mveDDbUwVmW5sl9ygZCQZDZD\",\r\n    \"CommentId\":\"109207061044823_109218167710379\",\r\n    \"MessageEdit\":\"âjaj\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/editComments"
+			},
+			"response": []
+		},
+		{
+			"name": "unlike commnent",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",    \r\n    \"UserToken\":\"EAASOqGiumjABAAZCJMI0ZB63083qZAZCdCJPeoZB8pZCmKZCGJDdiekEH79kyeqglWD5wsZAYu01AfYY0w1gvbS3jxJoZCIUtZC02ozgdzpGHvtAczjC0Skh8EPJVHkvlnZCPc48yWzRfzMVL1TDOyDqMAVIyYIYKoaaKOnbZCzqr4DIK749NYhsX8eCmi1mveDDbUwVmW5sl9ygZCQZDZD\",\r\n    \"CommentId\":\"109207061044823_109218167710379\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/unlikeComments"
+			},
+			"response": []
+		},
+		{
+			"name": "Long-Lived Access Tokens",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://graph.facebook.com/v7.0/oauth/access_token?grant_type=fb_exchange_token&client_id=1127349410978044&client_secret=e23343e619434a1761d5d1e9fad87018&fb_exchange_token=EAAQBUX0t2PwBAG5aGhABGXcWzex1t6EI5JVTewwsrGZCUoCf4W0IvxAOCZBJRlzobBGbp2l088YTwpW0vVkFN4LXZA08eASxLqD44P2adqTxFRhZBcwnZAwUWIcmdpN8P6rCFggNoVWYFHMyDgubpYjhZCqLiFKjkpbZCrpynYXHf5B94wG6bmlwdVt2Vl6hZCXjQJ7fgVmJQtcXqoamG7FXBCHhhDXuEFqt2XzNm3WYICU8lRMnml8O",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"v7.0",
+						"oauth",
+						"access_token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "fb_exchange_token"
+						},
+						{
+							"key": "client_id",
+							"value": "1127349410978044"
+						},
+						{
+							"key": "client_secret",
+							"value": "e23343e619434a1761d5d1e9fad87018"
+						},
+						{
+							"key": "fb_exchange_token",
+							"value": "EAAQBUX0t2PwBAG5aGhABGXcWzex1t6EI5JVTewwsrGZCUoCf4W0IvxAOCZBJRlzobBGbp2l088YTwpW0vVkFN4LXZA08eASxLqD44P2adqTxFRhZBcwnZAwUWIcmdpN8P6rCFggNoVWYFHMyDgubpYjhZCqLiFKjkpbZCrpynYXHf5B94wG6bmlwdVt2Vl6hZCXjQJ7fgVmJQtcXqoamG7FXBCHhhDXuEFqt2XzNm3WYICU8lRMnml8O"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "likes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",\r\n    \"Token\":\"EAASOqGiumjABAMavmmZBk8kdG8h5ylG5pWlae3BJcSKbRw0mR1ish3XOXnsz02qlMJCdMa9yItAqVfUqo4PGZBKuHJJ3bcDUIYaAQwZCDDiFuBjupe5tgfXvkZChbgdyKcig0XQju0nv9nLZCfY4xYe7sRmuxiZCgJ1rDmcdTovLxyCjhQaDuvvjLRuXnsLynZAxgDNQ1khaQZDZD\",\r\n    \"PostId\":\"106596004639262_110369757595220\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/likes"
+			},
+			"response": []
+		},
+		{
+			"name": "shares",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",\r\n    \"Token\":\"EAASOqGiumjABAMavmmZBk8kdG8h5ylG5pWlae3BJcSKbRw0mR1ish3XOXnsz02qlMJCdMa9yItAqVfUqo4PGZBKuHJJ3bcDUIYaAQwZCDDiFuBjupe5tgfXvkZChbgdyKcig0XQju0nv9nLZCfY4xYe7sRmuxiZCgJ1rDmcdTovLxyCjhQaDuvvjLRuXnsLynZAxgDNQ1khaQZDZD\",\r\n    \"PostId\":\"106596004639262_110369757595220\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/shares"
+			},
+			"response": []
+		},
+		{
+			"name": "counts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",\r\n    \"Token\":\"EAASOqGiumjABAMZCYNtWsZAbHnKfoTvHCq9lTfzSF1ru9nywR6DRJ2SpDijCc5hhgJJBWFjtcsiVZAaunU1jAcOuGnBmBoTycLkULq1DIQYZBsVXMvSOJixqLKDfACqExiMEgSVIuPJ62Y8W9wIPlAlsDZCczq9CGitVtssvL5KCeo37Vv9jflkAqWi7aCHH4YgFJAW3OoAZDZD\",\r\n    \"PostId\":\"106596004639262_110369757595220\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/counts"
+			},
+			"response": []
+		},
+		{
+			"name": "upload video to page",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",\r\n    \"Title\":\"test video 17h30\",\r\n    \"Message\":\"test 17h30\",\r\n    \"Token\":\"EAAFkX1YPKTMBAEKvDelJplW8xTTIdErWOv8eD5Dp4HMM8avitlZCk5IFaKUz45wZCQ0De5zH8UMDGZB1vSggYadEaKmZBJZB1ZB3FhoZBIu0qcvF6M01nHZAFEBCLbnqyBvCqgFoJXnVYRA98mH8qvypAK0FvoXeEJRfdtAILm71b3VGZA9LtNrZBqFosFWVCvmWBInmKz54DXh9ZBlHUXTQSh7ryDcmsIuWDlNIi4LjTFELKOw51e2aGAa\",\r\n    \"Thumbnail\":\"https://baoquocte.vn/stores/news_dataimages/dieulinh/012020/29/15/nhung-buc-anh-dep-tuyet-voi-ve-tinh-ban.jpg\",\r\n    \"Videos\":\"http://storage.ggg.tek4tv.vn:8082/mam/golden_gate/mien_bac/kichi/facebook/content_page/perform/2020/12/15/test/video/15122020154020/video/15122020154952/155022_screen20201129082844.mp4\",\r\n    \"AppId\":\"1127349410978044\",\r\n    \"AppSecret\":\"30268bb06983f183738264f313d73aba\",\r\n    \"Version\":\"v7.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/video"
+			},
+			"response": []
+		},
+		{
+			"name": "edit post",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",\r\n    \"PostId\":\"106596004639262_113756883923174\",\r\n    \"Token\":\"EAASOqGiumjABAOpth705k8wn17xXBQ4022IfhX3GvnuHbZCr6FGmc0EpZBpa0asYCiVZA9NJersEMxkuZAVoejjKIpsDZC0D5zzrr7EVZCQLb9JeYLjb49mDMyhFNISWuvT8VpaG3NWLdhHVsYfLCvSGp5V1ZAUkWtwv12n0ZBtG9JcBae0RyWd9doPASqi4o8itFJOw9BYNJAZDZD\",\r\n    \"Title\":\"Video 221\",\r\n    \"Message\":\"2233H----i! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.\",\r\n    \"AppId\":\"1127349410978044\",\r\n    \"AppSecret\":\"30268bb06983f183738264f313d73aba\",\r\n    \"Version\":\"v7.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/EditPostVideo"
+			},
+			"response": []
+		},
+		{
+			"name": "edit post(img)",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",\r\n    \"PostId\":\"106596004639262_113755747256621\",\r\n    \"Token\":\"EAASOqGiumjABAOpth705k8wn17xXBQ4022IfhX3GvnuHbZCr6FGmc0EpZBpa0asYCiVZA9NJersEMxkuZAVoejjKIpsDZC0D5zzrr7EVZCQLb9JeYLjb49mDMyhFNISWuvT8VpaG3NWLdhHVsYfLCvSGp5V1ZAUkWtwv12n0ZBtG9JcBae0RyWd9doPASqi4o8itFJOw9BYNJAZDZD\",\r\n    \"Message\":\"22Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.\",\r\n    \r\n   \"Images\":[\"http://storage.ggg.tek4tv.vn:8082/mam/golden_gate/facebook/content_page/2020/12/02/[toan_quoc]_tai_app_yu_tang_-_ban_moi_ban_cu_deu_co_qua/attach/02122020141622/231934_0411ytfb.png?fbclid=IwAR1SdfAfcbV_BhIzbZVR-h8EJ_dLIIZ4_k2hCac91-63QFXZjQzz5CPslOw\",\"http://storage.ggg.tek4tv.vn:8082/mam/golden_gate/facebook/content_page/2020/12/02/[toan_quoc]_tai_app_yu_tang_-_ban_moi_ban_cu_deu_co_qua/attach/02122020141622/231934_0411ytfb.png?fbclid=IwAR1SdfAfcbV_BhIzbZVR-h8EJ_dLIIZ4_k2hCac91-63QFXZjQzz5CPslOw\"],\r\n   \"AppId\":\"1127349410978044\",\r\n    \"AppSecret\":\"30268bb06983f183738264f313d73aba\",\r\n    \"Version\":\"v7.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/EditPostImage"
+			},
+			"response": []
+		},
+		{
+			"name": "http://127.0.0.1:8000/api/S3Amazone",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"BucketName\":\"testtting1\",\r\n    \"Region\":\"ap-southeast-1\",\r\n    \"Key\":\"AKIAWFQ27UD6M5427YGN\",\r\n    \"Secret\":\"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\",\r\n    \"FilePath\":\"https://storage.tek4tv.vn//mam/dai_phat_thanh_truyen_hinh_tra_vinh/2020/11/06/cang_long_phat_huy_hieu_qua_suc_manh_dan_van_kheo/182854_cang_long_phat_huy_hieu_qua_suc_manh_dan_van_kheo.mp4\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/S3Amazone"
+			},
+			"response": []
+		},
+		{
+			"name": "upload cover",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",\r\n    \"Token\":\"EAASOqGiumjABALOd5bBh1sMHROiuZBstTHZCs77WZAHdajs3kepZA2gN3FCtn4dJW6lahZBfrA6oejutu9ZBDAOGpzunJcD6BhGncIqCmKj93T50R1mf5vMGfIEsBHZB9AhU6b0RgowAZCor9wEWZBkuQsVl2ZC9eRSYdx9xXTzQFQlRWv6wb3aAEpHZCISxIZBw3phV9TSLEWBfVAZDZD\",\r\n    \"CoverImage\":\"http://healthhub.co/wp-content/uploads/2014/02/Group-Slider.jpg\",\r\n    \r\n    \"AppId\":\"1127349410978044\",\r\n\"AppSecret\":\"30268bb06983f183738264f313d73aba\",\r\n\"Version\":\"v7.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/uploadCover"
+			},
+			"response": []
+		},
+		{
+			"name": "get token wp",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "username",
+						"value": "demowp",
+						"type": "text",
+						"disabled": true
+					},
+					{
+						"key": "password",
+						"value": "123456",
+						"type": "text",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\":\"demowp\",\r\n    \"password\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/wordpress/wp-json/jwt-auth/v1/token"
+			},
+			"response": []
+		},
+		{
+			"name": "get posts wp",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva2ljaGkuY29tLnZuIiwiaWF0IjoxNjA4NjEyOTEzLCJuYmYiOjE2MDg2MTI5MTMsImV4cCI6MTYwOTIxNzcxMywiZGF0YSI6eyJ1c2VyIjp7ImlkIjo0MX19fQ.67n7rtK4TJR4TlzsCEs4PxmfxtQ4Txr3Wzy8jCNH_x0"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/wordpress/wp-json/wp/v2/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "create new posts wp",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODA4MFwvd29yZHByZXNzIiwiaWF0IjoxNjA4NjkzMjgzLCJuYmYiOjE2MDg2OTMyODMsImV4cCI6MTYwOTI5ODA4MywiZGF0YSI6eyJ1c2VyIjp7ImlkIjoxfX19.p32DsPuy-p1yuusX6bxsQlCXBAOfN6QYd4E3AhMc6D0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Test\",\r\n    \"status\": \"private\",\r\n    \"content\": \"Some content\",\r\n    \"slug\": \"test-post\",\r\n    \"categories\":[2]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/wordpress/wp-json/wp/v2/posts"
+			},
+			"response": []
+		},
+		{
+			"name": "get category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwczpcL1wva2ljaGkuY29tLnZuIiwiaWF0IjoxNjA4NjEyOTEzLCJuYmYiOjE2MDg2MTI5MTMsImV4cCI6MTYwOTIxNzcxMywiZGF0YSI6eyJ1c2VyIjp7ImlkIjo0MX19fQ.67n7rtK4TJR4TlzsCEs4PxmfxtQ4Txr3Wzy8jCNH_x0"
+					}
+				},
+				"method": "GET",
+				"header": [],
+				"url": "https://kichi.com.vn/wp-json/wp/v2/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "create new category",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": {
+						"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOlwvXC9sb2NhbGhvc3Q6ODA4MFwvd29yZHByZXNzIiwiaWF0IjoxNjA4NjkzMjgzLCJuYmYiOjE2MDg2OTMyODMsImV4cCI6MTYwOTI5ODA4MywiZGF0YSI6eyJ1c2VyIjp7ImlkIjoxfX19.p32DsPuy-p1yuusX6bxsQlCXBAOfN6QYd4E3AhMc6D0"
+					}
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"cate 011\",\r\n    \"description\":\"des 01\" \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/wordpress/wp-json/wp/v2/categories"
+			},
+			"response": []
+		},
+		{
+			"name": "create avatar pagefb",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"PageId\":\"106596004639262\",\r\n\r\n\"Images\":\"http://storage.ggg.tek4tv.vn:8082/mam/golden_gate/facebook/content_page/2020/12/02/[toan_quoc]_tai_app_yu_tang_-_ban_moi_ban_cu_deu_co_qua/attach/02122020141622/231934_0411ytfb.png?fbclid=IwAR1SdfAfcbV_BhIzbZVR-h8EJ_dLIIZ4_k2hCac91-63QFXZjQzz5CPslOw\",\r\n\"Token\":\"EAASOqGiumjABAO43vVao7X6vb1mH4fl1tSaeHZCVZAxZBVwwPnU3CJHvl1juc1u9X1Vq70C7BTjnSQZAQGLLZAUNXZC9Q1X8zVwkhKkZCjnxx74n3olE6gCPs12hQ4rw0wJugo6eRP6NTKx8Cnjf0Uy8JlAGFlJItSWoayujDmC9uQW2ZA0Iu48vfrnZC73ZCFByfpu9Y6aYtt6tj9iZA5SOSCl9XVHC6XzXO4SpjaVz46HYhSUtSPJBZBTA\",\r\n\"AppId\":\"1282753868765744\",\r\n\"AppSecret\":\"30268bb06983f183738264f313d73aba\",\r\n\"Version\":\"v7.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/createAvatar"
+			},
+			"response": []
+		},
+		{
+			"name": "scheduled publish posts",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"PageId\":\"107523158082424\",\r\n    \"Message\":\"[TEST][HN] CHỜ ĐÓN SỰ TRỞ LẠI LỪNG LẪY CÓ 1-0-2 CỦA VUVUZELA \\n𝐕𝐮𝐯𝐮𝐳𝐞𝐥𝐚 trở lại với diện mạo mới tại \\n𝐓𝐫𝐚̀𝐧𝐠 𝐓𝐡𝐢 và 𝐓𝐫𝐮𝐧𝐠 𝐇𝐨𝐚̀ 𝐍𝐡𝐚̂𝐧 𝐂𝐡𝐢́𝐧𝐡. Anh em đã sẵn sàng ghé chơi chưa? \\n🍺 Một không gian hiện đại, mới lạ và đẳng cấp.\\n🍺 Những trải nghiệm ẩm thực đầy phong cách với diện mạo mới, cùng hàng loạt bất ngờ đang chờ đón.\\nTheo dõi fanpage của Vuvuzela để không bỏ lỡ sự trở lại lừng lẫy của Vuvuzela vào ngày 15/04 này nhé!\",\r\n\"Images\":[\"https://storage.cms.ggg.tek4tv.vn/Mam\\\\MIEN_BAC\\\\VUVUZELA\\\\FACEBOOK\\\\KHAC\\\\2021\\\\04\\\\07\\\\attach\\\\07042021142825\\\\142827_bia01.jpg\",\r\n      \"https://storage.cms.ggg.tek4tv.vn/Mam\\\\MIEN_BAC\\\\VUVUZELA\\\\FACEBOOK\\\\KHAC\\\\2021\\\\04\\\\07\\\\attach\\\\07042021114014\\\\114024_IMG_496202.jpg\",\r\n      \"https://storage.cms.ggg.tek4tv.vn/Mam\\\\MIEN_BAC\\\\VUVUZELA\\\\FACEBOOK\\\\KHAC\\\\2021\\\\04\\\\07\\\\attach\\\\07042021114014\\\\114024_IMG_496203.jpg\"],\r\n\"Token\":\"EAAAAZAw4FxQIBAGb3rOVI3V1OWKBNzZCX2G79QQk7Q3B7cAKIA625MCpaVwmZAYIkLZA5PcMGCyqlgq9lPJ0iPceM8PBkUZBRrjTCZBswJGJ4hUjQQ98f4LBVOxhp7Ttgom4xXgoXnyd2PPYT2ZBWtiv7ZCh2baq1B4vI28e1aN2MV4JzkYW1Mcz\",\r\n\"Time\":\"2021-04-12 17:10:00\",\r\n\"AppId\":\"1127349410978044\",\r\n\"AppSecret\":\"e23343e619434a1761d5d1e9fad87018\",\r\n\"Version\":\"v7.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/mutiple/publishPosts"
+			},
+			"response": []
+		},
+		{
+			"name": "publish video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"PageId\":\"106596004639262\",\r\n    \"Title\":\"test video 14h00\",\r\n    \"Message\":\"22Hi! I'm your first Markdown file in **StackEdit**. If you want to learn about StackEdit, you can read me. If you want to play with Markdown, you can edit me. Once you have finished with me, you can create new files by opening the **file explorer** on the left corner of the navigation bar.\",\r\n    \"Token\":\"EAASOqGiumjABACcRThIRCVcywy1F1zeToiYGMX5fcBwlsox7efpQoAlcOCGezpFLNtUM3JPuwpZBGwTP6fhJYf5DDqZBYcElHxv8VgCMcUn0U0ZArZCHTYb0GjAhlLqlgWDL1KPrltTWyy97TXXIWOrmvmCVHP8K0YqIRUy3EjljgnjOvuZA3ZB26PwZCLbTycyo9iOeqsdAZAYESZCeZBrGdYpdsAhlIWfZBjDA36QAYDJC7X2MdSDQEPJ\",\r\n    \"Thumbnail\":\"https://baoquocte.vn/stores/news_dataimages/dieulinh/012020/29/15/nhung-buc-anh-dep-tuyet-voi-ve-tinh-ban.jpg\",\r\n    \"Videos\":\"http://storage.ggg.tek4tv.vn:8082/mam/golden_gate/mien_bac/kichi/facebook/content_page/perform/2020/12/15/test/video/15122020154020/video/15122020154952/155022_screen20201129082844.mp4\",\r\n   \"Time\":\"2021-01-04 14:00:00\",\r\n\"AppId\":\"1127349410978044\",\r\n\"AppSecret\":\"30268bb06983f183738264f313d73aba\",\r\n\"Version\":\"v7.0\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/video/publishVideo"
+			},
+			"response": []
+		},
+		{
+			"name": "get page by user_token",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://graph.facebook.com/280380636909978/accounts?access_token=EAAQBUX0t2PwBAAQhZBlkdllDHXsZCCtF0jbZBvrU7W1UAGSXH1vbXmgIJsaqUI77558qApqWfW2hT8vnuBKRcDpdHZCWjZCFW73UCaHZAxexfODk7vt96wRe0dwZCL4TSwZBakjToM4deX4NcnF7gEYcDNud0ZCOCfRtjOZBr1iaHmVwZDZD",
+					"protocol": "https",
+					"host": [
+						"graph",
+						"facebook",
+						"com"
+					],
+					"path": [
+						"280380636909978",
+						"accounts"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "EAAQBUX0t2PwBAAQhZBlkdllDHXsZCCtF0jbZBvrU7W1UAGSXH1vbXmgIJsaqUI77558qApqWfW2hT8vnuBKRcDpdHZCWjZCFW73UCaHZAxexfODk7vt96wRe0dwZCL4TSwZBakjToM4deX4NcnF7gEYcDNud0ZCOCfRtjOZBr1iaHmVwZDZD"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
