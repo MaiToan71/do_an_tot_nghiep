@@ -13,6 +13,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+
+
+
+Route::get('/','HomeController@Home')->name('Home');
+Route::get('/upload','UploadController@Upload')->name('upload');
+Route::get('/calendar','CalendarController@Calendar')->name('calendar');
+Route::get('/content','ContentController@Content')->name('content');
